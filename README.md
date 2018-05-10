@@ -1,12 +1,12 @@
 # git-configure
 ## 初始化：
-*ssh-keygen 时，请先进入到 ~/.ssh 目录，不存在的话，请先创建。并且保证 ~/.ssh 以及所有父目录的权限不能大于 711
+* ssh-keygen 时，请先进入到 ~/.ssh 目录，不存在的话，请先创建。并且保证 ~/.ssh 以及所有父目录的权限不能大于 711
 
 ssh-keygen -f test   -C "test key"  //-f 选项指定生成文件的文件名  -C选项是公钥文件中的备注
                 ~~文件名   ~~~~ 备注  
 
-*$ ssh-keygen -t rsa -C "youremail@yourcompany.com” -f ~/.ssh/id-rsa
-*密钥类型可以用 -t (rsa dsa)选项指定。如果没有指定则默认生成用于SSH-2的RSA密钥
+* $ ssh-keygen -t rsa -C "youremail@yourcompany.com” -f ~/.ssh/id-rsa
+* 密钥类型可以用 -t (rsa dsa)选项指定。如果没有指定则默认生成用于SSH-2的RSA密钥
 
 语法
 ssh-keygen(选项)
