@@ -47,3 +47,20 @@ ssh-keygen(选项)
 * git checkout - 切换到下一个分支
 * 
 * git branch -a  查看所有分支包含线上
+
+
+### ssh-keygen设置ssh无密码登录
+
+* ssh-keygen - 生成、管理和转换认证密钥，包括 RSA 和 DSA 两种密钥
+密钥类型可以用 -t 选项指定。如果没有指定则默认生成用于SSH-2的RSA密钥
+ 
+## 配置：
+* 1、在本地机器中的~/.ssh/目录下执行下命令
+ssh-keygen -t dsa
+将生成两个文件,id_dsa和id_dsa.pub
+ 
+* 2、将id_dsa.pub拷贝到远程机器,并且将id_dsa.pub的内容添加到~/.ssh/authorized_keys中
+cat id_dsa.pub >>authorized_keys
+注意:目录.ssh和文件authorized_keys的权限必须是600
+ 
+完成以上操作之后，用户从本地机器到远程机器就不需要用密码了
